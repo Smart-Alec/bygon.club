@@ -1,0 +1,9 @@
+#content{
+  padding: 1em 10%;
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+body{
+    background-color: var(--background-color);
+}
