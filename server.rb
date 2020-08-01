@@ -4,7 +4,7 @@ set :protection, :except => :frame_options
 set :bind, "0.0.0.0"
 
 get "/" do
-  erb :index, locals: {title: "Home"}
+  erb :index, locals: {title: "Home", stylesheet: "index"}
 end
 
 get "/chat" do

@@ -4,6 +4,9 @@
     <link rel = "stylesheet" href = "/css/root.css">
     <link rel = "stylesheet" href = "/css/header.css">
     <link rel = "stylesheet" href = "/css/content.css">
+    <% if defined? stylesheet %>
+    <link rel = "stylesheet" href = "/css/<%= stylesheet %>.css">
+    <% end %>
     <meta name = "viewport" content = "width=device-width">
     <meta encoding = "UTF-8">
     <title><%= title %></title>
@@ -17,6 +20,9 @@
         <a href = "/games">Games</a>
       </div>
     </div>
+    <div id = "border_bottom"></div>
+    <div id = "border_bottom_transition"></div>
+    <script src = "/js/header.js"></script>
     <div id = "content">
       <%= yield %>
     </div>
