@@ -19,9 +19,7 @@
 /* #header #links */
 
 #header #links{
-  width: 25%;
   display: inline-block;
-  margin-left: 25%;
 }
 
 #header #links a{
@@ -30,15 +28,36 @@
   font-family: var(--font-family);
   transition: color 1s;
   font-size: 1.5em;
-  width: 32%;
   text-align: center;
   display: inline-block;
   overflow: hidden;
+  margin-left: 1em;
 }
 
 #header #links a:hover{
   color: var(--accent-color);
   transition: color 1s;
+}
+
+/* #login */
+
+#login{
+  float: right;
+  border: 0.125em solid var(--font-color);
+  padding: 0;
+  border-radius: 10em;
+  height: 1.5em;
+  transition: border 1s;
+}
+
+#login:hover{
+  border-color: var(--accent-color);
+  transition: border-color 1s;
+}
+
+#login svg{
+  height: 1.5em;
+  fill: var(--background-color);
 }
 
 /* #border_bottom */
