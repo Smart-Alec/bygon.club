@@ -45,7 +45,7 @@
   float: right;
   border: 0.125em solid var(--font-color);
   padding: 0;
-  border-radius: 10em;
+  border-radius: 100%;
   height: 1.5em;
   transition: border 1s;
 }
@@ -57,7 +57,14 @@
 
 #login svg{
   height: 1.5em;
-  fill: var(--background-color);
+  fill: var(--font-color);
+  transition: fill 1s;
+  border-radius: 100%;
+}
+
+#login svg:hover{
+  fill: var(--accent-color);
+  transition: fill 1s;
 }
 
 /* #border_bottom */
