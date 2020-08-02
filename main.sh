@@ -1,6 +1,6 @@
-#To start server, simply set the replit flag to false below and run ./main.sh
+#Before commiting, change the replit flag to false.
 
-replit=true
+replit=false
 
 bool=$(gem list -i "^bundler$")
 
