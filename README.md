@@ -5,6 +5,7 @@ Modify line 3 of `main.sh` and set `replit` to false.
 `git clone https://github.com/Smart-Alec/bygon.club && cd bygon.club && chmod +x main.sh && sudo ./main.sh`
 ## To Stop The Server
 `^C` (ctrl + c)
+
 `cd .. && rm -rf bygon.club`
 
 # To Run
