@@ -20,5 +20,5 @@ end
 #error pages
 
 error 404 do
-  erb :"error/404", locals: {title: "Ope!"}
+  erb :"error/404", locals: {title: "Not Found", stylesheet: "error"}
 end

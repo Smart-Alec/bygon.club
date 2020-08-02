@@ -1,0 +1,11 @@
+.error{
+  font-size: 20em;
+  margin: 0;
+  text-align: center;
+}
+
+.sub_error{
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+}
