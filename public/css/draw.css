@@ -50,6 +50,10 @@ table, td{
 
 /* size panel */
 
+#size{
+  text-align: center;
+}
+
 #size div{
   transition: background-color 1s;
 }
@@ -77,4 +81,8 @@ table, td{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  border: none;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: inline-block;
 }
