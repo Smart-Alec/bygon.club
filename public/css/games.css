@@ -1,0 +1,8 @@
+.card{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card a{
+  background-color: rgba(55, 55, 55, 127);
+}
