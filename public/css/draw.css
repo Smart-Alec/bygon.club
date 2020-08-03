@@ -73,5 +73,8 @@ table, td{
 }
 
 #clear{
-  background-color: transparent;
+  background-image: url("/img/trashcan.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
