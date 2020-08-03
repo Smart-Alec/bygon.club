@@ -12,21 +12,23 @@ table, td{
   border-spacing: 0;
 }
 
-/* brush selection panel */
+/* generic panel */
 
-#panel{
+.panel{
   height: calc(100vh - 6.5em);
   box-sizing: border-box;
   display: block;
 }
 
-#panel div{
+.panel div{
   width: calc((100vh - 6.5em - 18em) / 9);
   height: calc((100vh - 6.5em - 18em) / 9);
   border-radius: 100%;
   margin: 1em;
   border: 0.5em solid var(--header-color);
 }
+
+/* brush selection panel */
 
 #red{background-color: red;}
 #orange{background-color: orange;}
@@ -44,4 +46,32 @@ table, td{
   background-color: var(--font-color);
   height: calc(100vh - 6.5em);
   border: 0.5em solid var(--header-color);
+}
+
+/* size panel */
+
+#size div{
+  transition: background-color 1s;
+}
+
+#small{
+  width: 1em;
+  height: 1em;
+  background-color: var(--accent-color);
+}
+
+#medium{
+  width: 2em;
+  height: 2em;
+  background-color: var(--accent-color);
+}
+
+#large{
+  width: 3em;
+  height: 3em;
+  background-color: var(--accent-color);
+}
+
+#clear{
+  background-color: transparent;
 }

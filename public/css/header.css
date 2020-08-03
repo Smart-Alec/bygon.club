@@ -14,6 +14,8 @@
 #header a img{
   display: inline-block;
   height: 1.5em;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 /* #header #links */

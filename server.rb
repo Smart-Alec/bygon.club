@@ -26,3 +26,6 @@ end
 error 404 do
   erb :"error/404", locals: {title: "Not Found", stylesheet: "error"}
 end
+
+#draw
+
