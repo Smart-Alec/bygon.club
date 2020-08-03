@@ -1,7 +1,11 @@
 require "sinatra"
+require "sinatra-websocket"
 
 set :protection, :except => :frame_options
 set :bind, "0.0.0.0"
+set :server, :thin
+
+sockets = []
 
 #url's
 
@@ -18,7 +22,26 @@ get "/games" do
 end
 
 get "/draw" do
-  erb :draw, locals: {title: "Draw!", stylesheet: :draw}
+  if !request.websocket?
+    erb :draw, locals: {title: "Draw!", stylesheet: :draw}
+  else
+    request.websocket do |ws|
+      ws.onopen do
+        ws.send "Heyo, socket opened!"
+        sockets << ws
+      end
+      
+      ws.onmessage do |msg|
+        sockets.each do |socket|
+          socket.send msg
+        end
+      end
+      ws.onclose do
+        puts "byebye!"
+        sockets.delete ws
+      end
+    end
+  end
 end
 
 #error pages
