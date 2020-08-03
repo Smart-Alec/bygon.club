@@ -7,3 +7,22 @@
 body{
     background-color: var(--background-color);
 }
+
+#content a, #content a:visited{
+  color: var(--font-color);
+  transition: color 1s;
+  text-decoration: none;
+}
+
+#content a:hover, #content a:focus{
+  color: var(--accent-color);
+  transition: color 1s;
+}
+
+#content a::before{
+  content: "<";
+}
+
+#content a::after{
+  content: ">";
+}

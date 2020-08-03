@@ -6,7 +6,7 @@ set :bind, "0.0.0.0"
 #url's
 
 get "/" do
-  erb :index, locals: {title: "Home", stylesheet: "index"}
+  erb :index, locals: {title: "Home", stylesheet: :index}
 end
 
 get "/chat" do
@@ -15,6 +15,10 @@ end
 
 get "/games" do
   erb :games, locals: {title: "Games"}
+end
+
+get "/draw" do
+  erb :draw, locals: {title: "Draw!", stylesheet: :draw}
 end
 
 #error pages

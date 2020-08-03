@@ -1,0 +1,47 @@
+/* application */
+
+body{
+  overflow: hidden;
+}
+
+/* table layout */
+
+table, td{
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+/* brush selection panel */
+
+#panel{
+  height: calc(100vh - 6.5em);
+  box-sizing: border-box;
+  display: block;
+}
+
+#panel div{
+  width: calc((100vh - 6.5em - 18em) / 9);
+  height: calc((100vh - 6.5em - 18em) / 9);
+  border-radius: 100%;
+  margin: 1em;
+  border: 0.5em solid var(--header-color);
+}
+
+#red{background-color: red;}
+#orange{background-color: orange;}
+#yellow{background-color: yellow;}
+#green{background-color: green;}
+#blue{background-color: blue;}
+#purple{background-color: purple;}
+#brown{background-color: brown;}
+#black{background-color: var(--background-color);}
+#white{background-color: var(--font-color);}
+
+/* drawing board */
+
+#board{
+  background-color: var(--font-color);
+  height: calc(100vh - 6.5em);
+  border: 0.5em solid var(--header-color);
+}
