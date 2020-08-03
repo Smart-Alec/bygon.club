@@ -1,6 +1,8 @@
 .card{
   background-repeat: no-repeat;
   background-size: contain;
+  width: 20em;
+  height: 10em;
 }
 
 .card a{
