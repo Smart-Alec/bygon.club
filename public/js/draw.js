@@ -11,7 +11,7 @@ board.lineCap = "round"
 
 //socket handler
 
-let socket = new WebSocket("ws://70.92.76.131/draw") //Change this url if host changes
+let socket = new WebSocket("ws://bygon.club/draw") //Change this url if host changes
 
 socket.addEventListener("message", (m) => {
   let img = new Image()
