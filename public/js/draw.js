@@ -9,6 +9,18 @@ let stroke = false
 
 board.lineCap = "round"
 
+//socket handler
+
+let socket = new WebSocket("ws://70.92.76.131/draw") //Change this url if host changes
+
+socket.addEventListener("message", (m) => {
+  let img = new Image()
+  img.src = m.data
+  img.addEventListener("load", () => {
+    board.drawImage(img, 0, 0)
+  })
+})
+
 //resize handler
 
 window.addEventListener("resize", () => {
@@ -68,6 +80,7 @@ canvas.addEventListener("mouseup", (e) => {
   board.stroke()
   board.closePath()
   board.moveTo(position[0], position[1])
+  socket.send(canvas.toDataURL())
 })
 
 canvas.addEventListener("mousemove", (e) => {
@@ -76,5 +89,6 @@ canvas.addEventListener("mousemove", (e) => {
     board.lineTo(position[0], position[1])
     board.stroke()
     board.moveTo(position[0], position[1])
+    socket.send(canvas.toDataURL())
   }
 })
